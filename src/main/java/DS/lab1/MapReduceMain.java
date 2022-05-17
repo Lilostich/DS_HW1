@@ -12,10 +12,17 @@ import org.apache.hadoop.io.SequenceFile.CompressionType;
 import org.apache.hadoop.io.compress.SnappyCodec;
 import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
 
-
+/**
+ * Main Application with main function
+ */
 @Log4j
 public class MapReduceMain {
 
+    /**
+     * Main function.
+     *
+     * @param args input args
+     */
     public static void main(String[] args) throws Exception {
 
         if (args.length < 2) {

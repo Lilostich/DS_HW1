@@ -6,12 +6,21 @@ import org.apache.hadoop.io.Text;
 
 import java.io.IOException;
 
-
+    /**
+     * Mapper class.
+     * @version 1.0
+     */
 public class Mapper extends org.apache.hadoop.mapreduce.Mapper<LongWritable, Text, Text, IntWritable> {
 
     private final static IntWritable one = new IntWritable(1);
     private Text word = new Text();
 
+    /**
+     * Main mapper function.
+     *
+     * @param value   string with log
+     * @param context job context
+     */
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
